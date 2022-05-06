@@ -9,10 +9,10 @@
 #include <dt-bindings/zmk/bt.h>
 
 
-#DEFINE DEFAULT  0
-#DEFINE SYM      1
-#DEFINE NAV      2
-#DEFINE NUMS     3
+#define DEFAULT  0
+#define SYM      1
+#define NAV      2
+#define NUMS     3
 
 
 / { 
