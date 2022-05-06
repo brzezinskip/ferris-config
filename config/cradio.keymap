@@ -23,6 +23,20 @@
             if-layers = <1 2>;
             then-layer = <3>;
         };
+        tri_layer_2 {
+            if-layers = <2 1>;
+            then-layer = <3>;
+        };
+    };
+
+    behaviors {
+        semi_to_colon: tap_dance_0 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SEMI TO COLON";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp SEMI>, <&kp COLON>;
+        };
     };
 
     combos {
@@ -35,7 +49,7 @@
         
          combo_enter {
             timeout-ms = <50>;
-            key-positions = <27 26>;
+            key-positions = <5 6>;
             bindings = <&kp ENTER>;
         };
         
@@ -53,7 +67,7 @@
     };
 
         keymap {
-            
+
         compatible = "zmk,keymap";
                 
         default_layer {
@@ -61,7 +75,7 @@
             bindings = <
             &kp Q &kp W &kp E &kp R &kp T 						&kp Y &kp U  &kp I    &kp O   &kp P 
             &kp A &kp S &kp D &kp F &kp G 			            &kp H &kp J  &kp K    &kp L   &kp QUOT
-            &kp Z &kp X &kp C &kp V &kp B				        &kp N &kp M  &kp CMMA &kp DOT &kp SEMI
+            &kp Z &kp X &kp C &kp V &kp B				        &kp N &kp M  &kp CMMA &kp DOT &kp semi_to_colon
                             &mo NAV &kp LSHFT   				&kp SPC &mo SYM
             >;
          };
@@ -69,9 +83,9 @@
         nav_layer {
             label = "SYM";
             bindings = <
-            &kp ESC    &kp LEFT_BRACKET    &kp LBKT          &kp KP_LPAR    &kp TILDE	&kp N6 &kp KP_RPAR   &kp RBKT  &kp RIGHT_BRACKET &kp GRAVE 
-            &kp MINUS  &kp KP_ASTERISK     &kp KP_EQUAL      &kp UNDER      &kp N4 	    &kp N3 &sk RSHFT     &sk RCTRL &sk RALT          &sk RCMD
-            &kp PLUS   &kp PIPE 	       &kp AT &kp SLASH  &kp N5 	    &none       &kp BSLH             &kp N7    &kp QMARK         &kp N1 
+            &kp ESC    &kp LBRC            &kp LBKT          &kp LPAR    &kp TILDE2	    &kp CARET  &kp RPAR      &kp RBKT  &kp RBRC          &kp GRAVE ACCENT 
+            &kp MINUS  &kp KP_ASTERISK     &kp KP_EQUAL      &kp UNDER      &kp DOLLAR 	    &kp POUND     &sk RSHFT     &sk RCTRL &sk RALT          &sk LCMD
+            &kp PLUS   &kp PIPE 	       &kp AT &kp SLASH  &kp PERCENT 	    &none       &kp BSLH             &kp AMPERSAND    &kp QMARK         &kp EXCLAMATION
                                                     &mo 1  &kp LSHIFT  		&kp RGUI &mo 2 
             >;
 		};
@@ -79,10 +93,10 @@
 		right_layer {
             label = "NAV";
             bindings = <
-            &kp TAB   &kp LG(GRAVE)  &kp LG(LS(LBKT))  &kp LG(LS(RBKT)) &none    			&none    &none     &none     &none      &none
-            &sk LCMD  &sk LALT       &sk LCTRL         &sk LSHFT        &none 			    &kp CAPS &kp LEFT  &kp DOWN  &kp RIGHT  &kp BKSP
-            &none     &none          &none             &none            &none    		    &none    &none     &none     &none      &kp ENTER
-                                                           &mo NAV &kp LSHIFT  	            &kp SPC  &mo SYM 
+            &kp TAB   &kp LG(GRAVE ACCENT)  &kp LG(LS(LBKT))  &kp LG(LS(RBKT)) &kp LG(TAB)  		&kp CAPS    &LG(LS(4))     &none     &none      &none
+            &sk LCMD  &sk LALT       &sk LCTRL         &sk LSHFT        &none 			            &kp UP   &kp LEFT  &kp DOWN  &kp RIGHT  &kp BKSP
+            &none     &none          &none             &none            &none    		            &none    &none     &none     &none      &kp ENTER
+                                                           &mo NAV &kp LSHIFT  	                    &kp SPC  &mo SYM 
             >;
 		};	
 		
@@ -91,7 +105,7 @@
             bindings = <
             &kp NUM_1  &kp NUM_2    &kp NUM_3    &kp NUM_4    &kp NUM_5 			&kp NUM_6 &kp NUM_7 &kp NUM_8 &kp NUM_9 &kp NUM_0
             &sk LCMD   &sk LALT     &sk LCTRL    &sk LSHFT    &none 			    &none     &sk RSHFT &sk RCTRL &sk RALT  &sk RCMD
-            &none      &none        &none        &none        &none                 &none     &none     &none     &none     &none
+            &none      &none        &none        &none        &none                 &none     &none     &none     &none     &bootloader
                                                       &mo NAV &kp LSHIFT  	        &kp SPC  &mo SYM 
             >;
 		};	
