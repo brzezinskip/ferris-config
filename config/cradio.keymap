@@ -23,6 +23,10 @@
             if-layers = <1 2>;
             then-layer = <3>;
         };
+        tri_layer_2 {
+            if-layers = <2 1>;
+            then-layer = <3>;
+        };
     };
 
     behaviors {
@@ -79,17 +83,17 @@
         nav_layer {
             label = "SYM";
             bindings = <
-            &kp ESC    &kp LBRC            &kp LBKT          &kp LPAR    &kp TILDE2	    &kp CARET  &kp RPAR      &kp RBKT  &kp RBRC          &kp GRAVE 
-            &kp MINUS  &kp KP_ASTERISK     &kp KP_EQUAL      &kp UNDER      &kp DOLLAR 	    &kp POUND     &sk RSHFT     &sk RCTRL &sk RALT          &sk LCMD
-            &kp PLUS   &kp PIPE 	       &kp AT &kp SLASH  &kp PERCENT 	    &none       &kp BSLH             &kp AMPERSAND    &kp QMARK         &kp EXCLAMATION
-                                                    &mo 1  &kp LSHIFT  		&kp RGUI &mo 2 
+            &kp ESC    &kp LBRC            &kp LBKT          &kp LPAR       &kp TILDE2	    &kp CARET     &kp RPAR      &kp RBKT         &kp RBRC          &kp GRAVE 
+            &kp MINUS  &kp KP_ASTERISK     &kp KP_EQUAL      &kp UNDER      &kp DOLLAR 	    &kp POUND     &sk RSHFT     &sk RCTRL        &sk RALT          &sk LCMD
+            &kp PLUS   &kp PIPE 	       &kp AT            &kp SLASH      &kp PERCENT     &none         &kp BSLH      &kp AMPERSAND    &kp QMARK         &kp EXCLAMATION
+                                                                      &mo 1  &kp LSHIFT     &kp RGUI &mo 2 
             >;
 		};
 		
 		right_layer {
             label = "NAV";
             bindings = <
-            &kp TAB   &kp LG(GRAVE)  &kp LG(LS(LBKT))  &kp LG(LS(RBKT)) &kp LG(TAB)  		        &kp CAPS    &kp G(LS(NUM_2))     &none     &none      &none
+            &kp TAB   &kp LG(GRAVE)  &kp LG(LS(LBKT))  &kp LG(LS(RBKT)) &kp LG(TAB)  		        &kp CAPS    &kp LG(LS(NUM_2))     &none     &none      &none
             &sk LCMD  &sk LALT       &sk LCTRL         &sk LSHFT        &none 			            &kp LEFT   &kp UP  &kp DOWN  &kp RIGHT  &kp BKSP
             &none     &none          &none             &none            &none    		            &none    &none     &none     &none      &kp ENTER
                                                            &mo NAV &kp LSHIFT  	                    &kp SPC  &mo SYM 
