@@ -48,7 +48,7 @@
         };
         
          combo_enter {
-            timeout-ms = <50>;
+            timeout-ms = <20>;
             key-positions = <2 3>;
             bindings = <&kp ENTER>;
         };
@@ -63,6 +63,12 @@
             timeout-ms = <50>;
             key-positions = <11 12>;
             bindings = <&kp LALT>;
+        };
+
+        combo_lalt {
+            timeout-ms = <25>;
+            key-positions = <5 15>;
+            bindings = <&kp BKSP>;
         };
     };
 
