@@ -95,7 +95,7 @@
         nav_layer {
             label = "SYM";
             bindings = <
-            &kp TAB    &kp LBRC            &kp LBKT          &kp LPAR       &kp TILDE	    &kp CARET     &kp RPAR      &kp RBKT         &kp RBRC          &kp GRAVE 
+            &kp ESC    &kp LBRC            &kp LBKT          &kp LPAR       &kp TILDE	    &kp CARET     &kp RPAR      &kp RBKT         &kp RBRC          &kp GRAVE 
             &kp MINUS  &kp KP_ASTERISK     &kp KP_EQUAL      &kp UNDER      &kp DOLLAR 	    &kp POUND     &sk RSHFT     &sk RCTRL        &sk RALT          &sk LCMD
             &kp PLUS   &kp PIPE 	       &kp AT            &kp SLASH      &kp PERCENT     &none         &kp BSLH      &kp AMPERSAND    &kp QMARK         &kp EXCLAMATION
                                                                       &mo NAV  &kp LSHIFT     &kp RGUI &mo 2 
